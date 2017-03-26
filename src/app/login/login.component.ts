@@ -3,6 +3,10 @@ import { Router } from '@angular/router';
 
 import { AuthenticationService } from '../_services/index';
 
+import { Http, Headers, Response } from '@angular/http';
+
+import 'rxjs/add/operator/catch';
+
 @Component({
     moduleId: module.id,
     templateUrl: 'login.component.html'
@@ -29,9 +33,16 @@ export class LoginComponent implements OnInit {
                 if (result === true) {
                     this.router.navigate(['/']);
                 } else {
+                    console.log("Incorrecto");
                     this.error = 'Username or password is incorrect';
                     this.loading = false;
                 }
-            });
+            },
+          err => {
+            let response = JSON.parse(err._body);
+            console.log("DATA: ", response.message)
+            this.error = response.message;
+            this.loading = false;
+          });
     }
 }

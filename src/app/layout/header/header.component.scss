@@ -1,0 +1,23 @@
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }
+header{
+        position:fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+        margin-top:0px;
+        z-index: 2;
+        @include box-shadow(none, 0, 10px, 1px, rgba(0, 0, 0, 0.5));
+
+    }
+span {
+  margin-left: 8px;
+}
+
+.fill {
+  flex: 1 1 auto;
+}

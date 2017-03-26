@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Angular Material Theme
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+*/
+
+
+
+footer{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+}
+
+/* IE 6 */
+body{
+  margin-top:60px;
+  margin-bottom:60px;
+}

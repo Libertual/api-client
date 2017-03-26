@@ -2,15 +2,19 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { NgModule }       from '@angular/core';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule }     from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { AppComponent }   from './app.component';
 import { Routing }        from './app.routing';
+import { LayoutModule } from './layout/layout.module';
 
 import { AuthGuard } from './_guards/index';
 import { AuthenticationService, UserService } from './_services/index';
 
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
+
+import 'hammerjs';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { HomeComponent } from './home/index';
     BrowserModule,
     FormsModule,
     HttpModule,
-    Routing
+    Routing,
+    MaterialModule,
+    LayoutModule
   ],
   providers: [
     AuthGuard,
