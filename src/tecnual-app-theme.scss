@@ -1,39 +1,31 @@
-@import '~@angular/material/core/theming/all-theme';
-// Plus imports for other components in your app.
-
+@import '~@angular/material/core/theming/all-theme'; // Plus imports for other components in your app.
 // Include the base styles for Angular Material core. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 @include mat-core();
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
+
 $tecnual-app-primary: mat-palette($mat-indigo);
-$tecnual-app-accent:  mat-palette($mat-pink, A200, A100, A400);
-
+$tecnual-app-accent: mat-palette($mat-pink, A200, A100, A400);
 // The warn palette is optional (defaults to red).
-$tecnual-app-warn:    mat-palette($mat-red);
-
+$tecnual-app-warn: mat-palette($mat-red);
 // Create the theme object (a Sass map containing all of the palettes).
 $tecnual-app-theme: mat-light-theme($tecnual-app-primary, $tecnual-app-accent, $tecnual-app-warn);
-
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($tecnual-app-theme);
 
-@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+body {
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
 
-      -webkit-box-shadow:$top $left $blur $color #{$inset};
-      -moz-box-shadow:$top $left $blur $color #{$inset};
-      box-shadow:$top $left $blur $color #{$inset};
-    }
-header{
-        position:fixed;
-        top:0px;
-        left:0px;
-        right:0px;
-        margin-top:0px;
-        @include box-shadow(0, 1px, 10px, rgba(0, 0, 0, 0.5));
-
-    }
+footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
+}

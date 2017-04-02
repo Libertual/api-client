@@ -11,6 +11,8 @@ import { LayoutModule } from './layout/layout.module';
 import { AuthGuard } from './_guards/index';
 import { AuthenticationService, UserService } from './_services/index';
 
+import { SharedModule } from './shared/shared.module';
+
 import { LoginComponent } from './login/index';
 import { HomeComponent } from './home/index';
 
@@ -28,7 +30,8 @@ import 'hammerjs';
     HttpModule,
     Routing,
     MaterialModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ],
   providers: [
     AuthGuard,

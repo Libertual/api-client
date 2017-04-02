@@ -10,7 +10,6 @@ import { FooterRoutingModule } from './footer-routing.module';
 @NgModule({
   imports: [
     SharedModule,
-    FooterRoutingModule,
     MaterialModule
   ],
   declarations: [

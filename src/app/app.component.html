@@ -1,8 +1,29 @@
 <!-- main app container -->
-<header>
-  <router-outlet name="header"></router-outlet>
-</header>
-<router-outlet></router-outlet>
-<footer>
-  <router-outlet name="footer"></router-outlet>
-</footer>
+
+
+<md-sidenav-container>
+  <md-toolbar color="primary">
+    <div class="header-toolbar">
+    Tecnual
+  </div>
+  </md-toolbar>
+
+  <md-sidenav #sidenav mode="over" opened="false">
+
+    <button class="sidenav-button" md-button>boton1</button>
+    <button class="sidenav-button" md-button>boton2</button>
+    <button class="sidenav-button" md-button>boton3</button>
+    <button class="sidenav-button" md-button>boton4</button>
+    <button class="sidenav-button" md-button>boton5</button>
+  </md-sidenav>
+  <router-outlet></router-outlet>
+
+</md-sidenav-container>
+<button class="sidenav-toogle" md-mini-fab (click)="sidenav.toggle()" color="primary">
+    <md-icon>more_vert</md-icon>
+</button>
+
+
+
+
+<app-footer></app-footer>

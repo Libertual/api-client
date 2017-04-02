@@ -1,7 +1,11 @@
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
+
+import { SharedModule } from './shared/shared.module';
 
 import { LoginComponent }       from './login/index';
 import { HomeComponent }        from './home/index';
+
 
 import { AuthGuard }            from './_guards/index';
 
