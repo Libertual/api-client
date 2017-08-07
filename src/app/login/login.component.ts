@@ -34,14 +34,14 @@ export class LoginComponent implements OnInit {
                 if (result === true) {
                     this.router.navigate(['/']);
                 } else {
-                    console.log("Incorrecto");
+                    console.log('Incorrecto');
                     this.error = 'Username or password is incorrect';
                     this.loading = false;
                 }
             },
           err => {
-            let response = JSON.parse(err._body);
-            console.log("DATA: ", response.message)
+            const response = JSON.parse(err._body);
+            console.log('DATA: ', response.message);
             this.error = response.message;
             this.loading = false;
           });

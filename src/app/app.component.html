@@ -1,12 +1,15 @@
 <!-- main app container -->
 
-
+<md-toolbar color="primary">
+  <div class="header-toolbar">
+  Tecnual
+</div>
+<button class="sidenav-toogle" md-mini-fab (click)="sidenav.toggle()" color="primary">
+    <md-icon>more_vert</md-icon>
+</button>
+</md-toolbar>
 <md-sidenav-container>
-  <md-toolbar color="primary">
-    <div class="header-toolbar">
-    Tecnual
-  </div>
-  </md-toolbar>
+
 
   <md-sidenav #sidenav mode="over" opened="false">
 
@@ -19,9 +22,7 @@
   <router-outlet></router-outlet>
 
 </md-sidenav-container>
-<button class="sidenav-toogle" md-mini-fab (click)="sidenav.toggle()" color="primary">
-    <md-icon>more_vert</md-icon>
-</button>
+
 
 
 

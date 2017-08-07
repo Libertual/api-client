@@ -3,11 +3,11 @@ import { MaterialModule } from '@angular/material';
 
 import { SharedModule } from './shared/shared.module';
 
-import { LoginComponent }       from './login/index';
-import { HomeComponent }        from './home/index';
+import { LoginComponent } from './login/index';
+import { HomeComponent } from './home/index';
 
 
-import { AuthGuard }            from './_guards/index';
+import { AuthGuard } from './_guards/index';
 
 const appRoutes = [
     { path: 'login', component: LoginComponent },
