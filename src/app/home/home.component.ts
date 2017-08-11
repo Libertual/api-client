@@ -7,7 +7,7 @@ import { UserService } from '../_services/index';
 @Component({
     moduleId: module.id,
     templateUrl: 'home.component.html',
-    //directives: [ROUTER_DIRECTIVES],
+    // directives: [ROUTER_DIRECTIVES],
 })
 
 export class HomeComponent implements OnInit {

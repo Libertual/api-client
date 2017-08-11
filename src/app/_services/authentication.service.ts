@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
 
 import 'rxjs/add/observable/throw';
 
@@ -13,17 +13,17 @@ export class AuthenticationService {
     public token: string;
     constructor(private http: Http) {
         // set token if saved in local storage
-        var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
         this.token = currentUser && currentUser.token;
     }
 
     login(username: string, password: string): Observable<boolean> {
-        return this.http.put('http://localhost:3000/auth/login',{ email: username, password: password })
+        return this.http.put('http://localhost:3000/auth/login', { email: username, password: password })
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
-                console.log ("status: " + response.status)
-                let token = response.json() && response.json().token;
-                console.log("Token: " + token);
+                console.log ('status: ' + response.status);
+                const token = response.json() && response.json().token;
+                console.log('Token: ' + token);
 
                 if (token) {
                     // set token property
@@ -34,7 +34,7 @@ export class AuthenticationService {
                     // return true to indicate successful login
                     return true;
                 } else {
-                    console.log(response.json())
+                    console.log(response.json());
                     return false;
                 }
             }

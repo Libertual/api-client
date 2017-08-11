@@ -1,11 +1,11 @@
-import { BrowserModule }  from '@angular/platform-browser';
-import { NgModule }       from '@angular/core';
-import { FormsModule }    from '@angular/forms';
-import { HttpModule }     from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
-import { AppComponent }   from './app.component';
-import { Routing }        from './app.routing';
+import { AppComponent } from './app.component';
+import { Routing } from './app.routing';
 import { LayoutModule } from './layout/layout.module';
 
 import { AuthGuard } from './_guards/index';
